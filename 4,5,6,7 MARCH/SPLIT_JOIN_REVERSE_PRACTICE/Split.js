@@ -32,3 +32,12 @@ let join = reverse5.join("");
 let reverseStr = "Pranjal Mahajan";
 let reverseResult = reverseStr.split("").reverse().join("");
 console.log(reverseResult);
+
+//JOIN ===========================================
+let joinExmp = ["Hello","World"];
+console.log(joinExmp.join(" "))
+
+
+let arr2 = ["2026","03","07"];
+
+console.log(arr2.join("-"));
