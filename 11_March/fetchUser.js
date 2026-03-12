@@ -52,18 +52,32 @@ function fetchOrderDetails(orderId) {
   });
 }
 
-fetchUser()
-  .then((user) => {
-    console.log("User:", user);
-    return fetchOrders(user[1].id);
-  })
-  .then((orders) => {
-    console.log("Orders:", orders[1]);
-    return fetchOrderDetails(orders[1]);
-  })
-  .then((orderDetail) => {
-    console.log("Order Detail:", orderDetail);
-  })
-  .catch((err) => {
+// fetchUser()
+//   .then((user) => {
+//     console.log("User:", user);
+//     return fetchOrders(user[1].id);
+//   })
+//   .then((orders) => {
+//     console.log("Orders:", orders[1]);
+//     return fetchOrderDetails(orders[1]);
+//   })
+//   .then((orderDetail) => {
+//     console.log("Order Detail:", orderDetail);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+async function getData() {
+  try {
+    const users = await fetchUser();
+
+    const orders = await fetchOrders(users[0].id);
+
+    const orderDetail = await fetchOrderDetails(orders[0]);
+    console.log(orderDetail);
+  } catch (err) {
     console.log(err);
-  });
+  }
+}
+getData();
