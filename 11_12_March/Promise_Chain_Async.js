@@ -37,14 +37,12 @@ function fetchUser() {
     ]);
   });
 }
-
 function fetchOrders(userId) {
   return new Promise((resolve) => {
     console.log("Fetching orders for user:", userId);
     resolve(["Order 1", "Order 2"]);
   });
 }
-
 function fetchOrderDetails(orderId) {
   return new Promise((resolve) => {
     console.log("Fetching details for:", orderId);
@@ -52,7 +50,7 @@ function fetchOrderDetails(orderId) {
   });
 }
 
-// fetchUser()
+// ! fetchUser()
 //   .then((user) => {
 //     console.log("User:", user);
 //     return fetchOrders(user[1].id);
