@@ -1,4 +1,5 @@
 let createCounter = function (init) {
+    const original = init;
 
   return {
     increment: function () {
@@ -10,9 +11,13 @@ let createCounter = function (init) {
       return init;
     },
     reset: function () {
-      init;
+      init=original;
       return init;
     },
   };
 };
-console.log(createCounter(0).increment(3))
+console.log(createCounter(5))
+const counter = createCounter(5);
+console.log(counter.increment());
+console.log(counter.decrement());
+console.log(counter.reset());
