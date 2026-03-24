@@ -8,3 +8,8 @@ var map = function(arr, fn) {
   return result;
 };
 console.log(map([2,3,1], (n) => n + 1));
+
+function add(a,b){
+    return a+b
+}
+console.log(add(3,9))
