@@ -13,6 +13,7 @@ let createCounter = function (init) {
     reset: function () {
       init=original;
       return init;
+
     },
   };
 };
