@@ -1,4 +1,4 @@
-var map = function(arr, fn) {
+var map = function (arr, fn) {
   const result = [];
 
   for (let i = 0; i < arr.length; i++) {
@@ -7,9 +7,13 @@ var map = function(arr, fn) {
 
   return result;
 };
-console.log(map([2,3,1], (n) => n + 1));
+console.log(map([2, 3, 1], (n) => n + 1));
 
-function add(a,b){
-    return a+b
+function add(a, b) {
+  return a + b;
 }
-console.log(add(3,9))
+console.log(add(3, 9));
+
+const num = [1, 2, 3, 5];
+const result = num.map((n) => n * 1);
+console.log(result)
