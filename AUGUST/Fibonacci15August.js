@@ -52,3 +52,13 @@ console.log(sumOfevenDigit([1, 2, 3, 4, 5]));
 // console.log(sumOfEvenSimpleNumbers(12345));
 
 
+function sumOfdigits(SumNumber){
+  let sum=0;
+while(SumNumber>0){
+  let digit=SumNumber %10;
+  sum=sum+digit
+  SumNumber=Math.floor(SumNumber/10)
+}
+return sum;
+}
+console.log(sumOfdigits(12345))
