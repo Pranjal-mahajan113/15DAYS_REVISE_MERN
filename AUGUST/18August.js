@@ -71,3 +71,17 @@ function countFrequencyWithFilter(arr, target) {
   return arr.filter((item) => item === target).length;
 }
 console.log(countFrequencyWithFilter([1, 2, 2, 3, 2, 4], 2));
+
+function CountFrequency(arr) {
+  let frequency = {};
+  for (let i = 0; i < arr.length; i++) {
+    if (frequency[arr[i]]) {
+      frequency[arr[i]]++;
+    } else {
+      frequency[arr[i]] = 1;
+    }
+  }
+      return frequency;
+
+}
+console.log(CountFrequency([1, 2, 2, 3, 1, 2]));
